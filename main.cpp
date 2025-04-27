@@ -17,7 +17,7 @@ int main() {
 	char* CONVERTED_MENU_OPTIONS[4];
 	ifstream listIS;				 // grocery list input file stream
 	ofstream freqOS;				 // list frequency output file stream
-	vector<Grocery> groceries;		 // Grocery vector to hold grocery names and counts
+	vector<Grocery> groceries;			 // Grocery vector to hold grocery names and counts
 	string itemName;				 // buffer variable for vector and file creation
 
 	// for loop over MENU_OPTIONS, convert each element to char*
@@ -33,6 +33,7 @@ int main() {
 	freqOS.open("frequency.dat");	 // open output file
 	if (!freqOS.is_open()) {
 		cout << "Could not open file frequency.dat." << endl;
+		return 1;
 	}
 
 	listIS >> itemName; //get first item name
